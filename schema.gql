@@ -3,6 +3,16 @@
 # !!!   DO NOT MODIFY THIS FILE BY YOURSELF   !!!
 # -----------------------------------------------
 
+type Book {
+  author: String
+  coverImageUrl: String
+  id: ID
+  pageCount: Float
+  publisher: String
+  synopsis: String
+  title: String
+}
+
 type ListItem {
   bookId: String
   finishDate: Float
@@ -14,5 +24,6 @@ type ListItem {
 }
 
 type Query {
+  books(query: String = ""): [Book]
   listItem: ListItem
 }
