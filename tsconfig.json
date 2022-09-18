@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "target": "ES2018",
+    "lib": ["esnext", "esnext.asynciterable"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*", "build/*"]
+    },
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "outDir": "./build"
+  },
+  "exclude": ["build", "node_modules"],
+  "include": ["."],
+  "awesomeTypescriptLoaderOptions": {
+    "useBabel": true,
+    "reportFiles": ["./src/**/*"]
+  }
+}
