@@ -1,4 +1,4 @@
-import { Arg, Query, Resolver, ResolverInterface } from 'type-graphql'
+import { Arg, Query, Resolver } from 'type-graphql'
 
 import { ListItem } from '../model/ListItem'
 
@@ -13,7 +13,7 @@ const listItem: ListItem = {
 }
 
 @Resolver(of => ListItem)
-export class ListItemResolver implements ResolverInterface<ListItem> {
+export class ListItemResolver {
   @Query(returns => ListItem)
   async listItem(/* @Arg('usedId', { nullable: false }) usedId: string*/): Promise<ListItem | null> {
     return listItem
